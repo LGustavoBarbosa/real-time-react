@@ -6,8 +6,8 @@ import * as userActions from "../../state/user/actions";
 import * as Styled from "./styles";
 
 const Login = ({ singIn }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("gustavo.us@hotmail.com");
+  const [password, setPassword] = useState("789123");
   //addCar({ name: "Civic", board: "HRF-3453", onwer: "Turbi" });
 
   return (
