@@ -32,7 +32,7 @@ export function* handelWsConnection() {
     // Quando houver um dispatch da ação USER_LOGOUT
     const { cancel } = yield race({
       task: call(watchMessages, eventChannel),
-      cancel: take(typesUser.SIGN_OUT)
+      cancel: take(typesUser.SIGN_OUT_SUCCESS)
     });
 
     // Se a ação cancel vencer a corrida podemos

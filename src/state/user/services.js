@@ -34,6 +34,7 @@ export function* logOut() {
   try {
     yield call(repository.signOut);
     yield put({ type: typesUser.SIGN_OUT_SUCCESS });
+    history.push("/");
   } catch (error) {
     yield put({ type: typesUser.SIGN_IN_FAILURE });
   }
@@ -42,6 +43,6 @@ export function* logOut() {
 export default function* rootSaga() {
   yield all([
     takeLatest(typesUser.SIGN_IN_REQUEST, signIn),
-    takeLatest(typesUser.SIGN_OUT, logOut)
+    takeLatest(typesUser.SIGN_OUT_REQUEST, logOut)
   ]);
 }

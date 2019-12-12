@@ -7,6 +7,7 @@ import * as Styled from "./styles";
 
 const DashBoard = ({ wsConnect, signOut, cars }) => {
   useEffect(() => {
+    debugger;
     wsConnect();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

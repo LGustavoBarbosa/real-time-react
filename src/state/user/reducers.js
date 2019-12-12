@@ -20,7 +20,7 @@ export default function user(state = initialState, action) {
     case typesUser.SIGN_IN_REQUEST:
       return { ...state, loading: true };
 
-    case typesUser.SIGN_OUT:
+    case typesUser.SIGN_OUT_REQUEST:
       return { ...state, loading: true };
 
     case typesUser.SIGN_IN_SUCCESS:
